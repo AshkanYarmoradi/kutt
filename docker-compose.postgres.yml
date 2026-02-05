@@ -25,8 +25,6 @@ services:
         condition: service_healthy
       redis:
         condition: service_started
-    labels:
-      - traefik.http.services.server.loadbalancer.server.port=3000
   postgres:
     image: postgres
     restart: always
